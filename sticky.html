@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Sticky Modal</title>
+		
+
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<!-- individual effect -->
+		<link rel="stylesheet" type="text/css" href="css/dialog-ken.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+				
+				<div class="container">
+					
+				
+				<div class="row text-center">
+					
+		
+					<button data-dialog="somedialog" class="trigger btn btn-lg btn-success">Custom</button>
+					
+			
+				
+				
+
+				</div>
+
+				</div>
+
+				<div id="somedialog" class="dialog">
+					<div class="dialog__overlay"></div>
+					<div class="dialog__content">
+						<h2><strong>Hello</strong>, I am sticky modal</h2>
+						<div>
+						<button class="action btn btn-lg btn-danger" data-dialog-close>Close</button>
+						</div>
+					</div>
+				</div>
+				
+		
+		<script src="js/classie.js"></script>
+		<script src="js/dialogFx.js"></script>
+		<script>
+			(function() {
+
+				var dlgtrigger = document.querySelector( '[data-dialog]' ),
+					somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+					dlg = new DialogFx( somedialog );
+
+				dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg));
+
+
+
+			})();
+		</script>
+	</body>
+</html>
